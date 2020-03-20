@@ -1,0 +1,12 @@
+source: ./_source/
+#layouts: ../_layouts/
+
+defaults:
+  -
+    scope:
+      path: "pages" 
+    values:
+      layout: "default"
+      title: "Allan Perez"
+      page:
+        header: true
