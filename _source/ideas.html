@@ -1,0 +1,24 @@
+---
+layout: default
+title: Ideas
+---
+<style>
+ul{
+  padding-left: 10px;
+  opacity: 0.8;
+  list-style: none;
+  line-height: 20px;
+}
+</style>
+
+  {% for category in site.categories %}
+    <p class="mono bold">>> {{ category | first }}</p> 
+    {% for post in category.last %}
+    <ul>
+      <li>
+        <a class="mono" href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    </ul>
+    {% endfor %}
+  {% endfor %}
+

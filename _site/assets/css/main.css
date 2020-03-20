@@ -3,8 +3,9 @@ html, body{
 	background-color:#fbfbfb;
   font-family: 'Latin Modern Roman', 'Courier', Courier, monospace;
   font-size: 18px;
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
+  padding: 20px;
 }
 
 html{
@@ -16,7 +17,19 @@ p{
   font-family: inherit;
   color: #3c3c3c;
 }
+.mono{
+  font-family: 'Latin Modern Mono', 'Courier', Courier, monospace;
 
+}
+.footer{
+  margin-top: 50px;
+  color: #777;
+  text-align: center;
+
+  margin: 0 auto;
+  margin-top: 0px;
+  font-size: 0.8rem;
+}
 .header a, .footer a{
   font-family: 'Latin Modern Mono', 'Courier', Courier, monospace;
   color: inherit;
@@ -41,14 +54,10 @@ p{
 }
 
 .container{
-	margin-top: 5rem;
-	margin-bottom: 5rem;
-	padding-top:5%;
-	padding-bottom:5%;
 	border:2px #585858;
 	border-radius:1em;
 	line-height: 1.5em;
-	font-size:1.2em;
+	font-size:1em;
 	width:95%;
 	max-width:46em;
 }
@@ -76,7 +85,7 @@ p{
 }
 .sm-list li{
   float: left;
-  margin: 0 5px;
+  margin: 0 10px;
   list-style: none;
 }
 ul li{
@@ -84,3 +93,29 @@ ul li{
 }
 
 
+
+
+.blog-header{
+  text-align: center;
+  font-family: 'Latin Modern Mono', 'Courier', Courier, monospace;
+}
+.blog-header h1{
+  font-size: 1.5em;
+}
+.blog-content{
+  text-align: justify;
+}
+
+
+.fa{
+  font-size: 25px;
+  color: #444
+}
+.bold{
+  font-weight: bold;
+  color: #151515;
+}
+
+section{
+  margin: 0 auto 50px auto;
+}

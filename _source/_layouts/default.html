@@ -8,24 +8,33 @@
 		<meta name="robots" content="index, follow">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link rel="icon" href="imgs/favicon.ico" type="image/png">
+		<link rel="icon" href="/assets/img/favicon.ico" type="image/png">
 
     	<!-- Custom Fonts -->
     	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-      <link rel="stylesheet" href="assets/fonts/style/latinmodern-mono.css" type="text/css" charset="utf-8">
-      <link rel="stylesheet" href="assets/fonts/style/latinmodern-roman.css" type="text/css" charset="utf-8">
+      <link rel="stylesheet" href="/assets/fonts/style/latinmodern-mono.css" type="text/css" charset="utf-8">
+      <link rel="stylesheet" href="/assets/fonts/style/latinmodern-roman.css" type="text/css" charset="utf-8">
 
 
-    	<link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    	<link href="/assets/css/main.css" rel="stylesheet" type="text/css">
     	<title>{{ page.title }}</title>
 	</head>
 
 	<body>
+    <script>
+      window.onload = function(){
+        document.getElementById("loader").style.display = "none";
+      }
+    </script>
+    <div id="loader" style="position:absolute; top:0; left:0; width:100%; height:100%; background:#fff">
+    </div>
 		{% if page.header %}
 		{% else %}
       <div class="header">
-        <a href="" ><span style='font-size:30px;'>&#8592;</span> Home</a>
+        <section>
+          <a href="/" rel="nofollow"><span style='font-size:30px;'>&#8592;</span> Home</a>
+        </section>
       </div>
     {% endif %}
 		<div class="container">
@@ -34,18 +43,22 @@
     {% if page.header %}
 		{% else %}
       <div class="footer">
+      <section>
         <div class="separator"> </div>
         <ul class="sm-list"> 
           <li>
-            <a href="/feed.xml" title="">&#128400; Instagram </a>
-          </li> 
-          <li>
-            <a href="mailto:allan.steven.pm@gmail.com" title=""> &#128233; allan.steven.pm@gmail.com </a>
-          </li> 
-          <li>
-            <a href="https://linkedin.com/in/Allan-Perez" title="allanperez"> LinkedIn </a>
+            <a href="https://linkedin.com/in/Allan-Perez" title="allanperez"> <i class="fa fa-linkedin-square"></i> LinkedIn </a>
           </li>
+          <li>
+            <a href="mailto:allan.steven.pm@gmail.com" title=""> <i class="fa fa-envelope-square"></i> allan.steven.pm@gmail.com </a>
+          </li> 
+
+          <li>
+            <a href="https://linkedin.com/in/Allan-Perez" title="allanperez"> <i class="fa fa-github-square"></i> Github </a>
+          </li>
+
         </ul>
+      </section>
       </div>
     {% endif %}
 
