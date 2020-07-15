@@ -98,6 +98,11 @@
 		}
 	}
 
+	h1{
+		font-size: 3em;
+		letter-spacing: -1px;
+	}
+
 	h2 {
 		font-size: 2em;
 		letter-spacing: -1px;
@@ -189,7 +194,8 @@
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 2em;
+		margin-bottom: 1em;
+		opacity: 0.8;
 	}
 
 	dl {
