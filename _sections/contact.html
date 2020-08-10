@@ -3,10 +3,17 @@ title: Contact
 icon: fa-envelope
 order: 4
 ---
+<script>
+  function customVal(){
+    if(gg.checked) return false;
+    return true;
+  }
+</script>
 
 <p>Are you looking for help? Ask for it! If you have a problem involving quantitative analysis or a software project, I'm sure I can help.</p>
 
 <form id="my-form"
+  onsubmit="event.preventDefault(); customVal();"
   action="https://formspree.io/mlepbjeo"
   method="POST"
 >
@@ -60,12 +67,9 @@ order: 4
       if(!gg.checked){
         ev.preventDefault();
         var data = new FormData(form);
-        console.log("noerr");
         ajax(form.method, form.action, data, success, error);
         return;
       }
-      error();
-      console.log("error")
     });
   });
   
