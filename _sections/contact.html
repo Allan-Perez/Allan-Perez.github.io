@@ -16,6 +16,7 @@ order: 4
 	<div class="12u$">
 		<textarea name="message" placeholder="Message"></textarea>
 	</div>
+  <input id="gg" type="checkbox"/>
 	<div class="12u$">
 		<!--<input type="submit" value="Send Message" />-->
 	  <button class="button btn btn-lg btn-block" id="my-form-button">Submit</button>
@@ -25,7 +26,12 @@ order: 4
 </form>
 
 <!-- Place this script at the end of the body tag -->
-
+<style>
+#gg{
+  display: none;
+  visibility: hidden;
+}
+</style>
 <script>
   window.addEventListener("DOMContentLoaded", function() {
 
@@ -34,6 +40,7 @@ order: 4
     var form = document.getElementById("my-form");
     var button = document.getElementById("my-form-button");
     var status = document.getElementById("my-form-status");
+    var gg = document.getElementById("gg");
 
     // Success and Error functions for after the form is submitted
     
@@ -50,9 +57,16 @@ order: 4
     // handle the form submission event
 
     form.addEventListener("submit", function(ev) {
-      ev.preventDefault();
-      var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
+      if(gg.checked){
+        error();
+        console.log("error")
+        return;
+      }else{
+        ev.preventDefault();
+        var data = new FormData(form);
+        console.log("noerr");
+        ajax(form.method, form.action, data, success, error);
+      }
     });
   });
   
