@@ -1,0 +1,64 @@
+/* Fonts */
+@font-face {
+    font-family: "Manrope";
+    src: url("fonts/manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Newsreader";
+    src: url("fonts/newsreader/Newsreader-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: swap;
+}
+/* Main */
+html {
+    font-family: "Manrope", sans-serif;
+    font-size: large;
+    font-weight: 400;
+    color: #473F36; /*#6B6155; update for accessibility!*/
+}
+body {
+  background: #F2EDE2;
+}
+
+h1{
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: "kern", "liga", "calt";
+  color: #14110D;
+}
+
+a {
+    text-decoration: underline;
+    text-decoration-style:dashed;
+    color: #1768C4;
+
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #217ee7;
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
+    text-align: center;
+    max-width: 600px;
+    padding: 32px;
+    line-height: 1.6em;
+}
+.navbar {
+    text-align: left;
+}
+.justified{
+  text-align: left;
+}
